@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report Lost Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Report a Lost Item</h2>
+  <form onsubmit="return validateForm()">
+    <label>Item Name:</label><br>
+    <input type="text" name="itemName"><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description"></textarea><br><br>
+
+    <label>Date Lost:</label><br>
+    <input type="date" name="dateLost"><br><br>
+
+    <label>Category:</label><br>
+    <select name="category">
+      <option>Books</option>
+      <option>Electronics</option>
+      <option>ID Cards</option>
+      <option>Accessories</option>
+    </select><br><br>
+
+    <label>Upload Photo:</label><br>
+    <input type="file" id="photo" onchange="previewImage()"><br><br>
+    <img id="preview" width="150" style="display:none;"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+<script src="script.js"></script>
+</html>
